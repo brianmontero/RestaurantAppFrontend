@@ -1,0 +1,11 @@
+.container-fluid {
+    background-color: #CCC;
+}
+
+#menu-title {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: -10px;
+}

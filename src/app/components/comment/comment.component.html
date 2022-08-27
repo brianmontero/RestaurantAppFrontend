@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="card h-100">
+        <div class="card-header">
+          <div class="username">
+            <p>{{ clientList[0].username }}</p>
+          </div>
+          <div class="options">
+            <i class="fas fa-flag" (click)="report()" title="Reportar comentario"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="stars">
+            <i class="fas fa-star" *ngFor="let i of [].constructor(item.stars)"></i>
+          </div>
+          <div class="comment">
+              <p>
+                {{ item.comment }}
+              </p>
+          </div>
+        </div>
+    </div>
+</div>

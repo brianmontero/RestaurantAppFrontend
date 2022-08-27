@@ -1,0 +1,136 @@
+#idSearch::-webkit-outer-spin-button,
+#idSearch::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#idSearch {
+    margin-left: 10px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 50%;
+    height: 40px;
+    outline: none;
+    transition: 0.2s;
+}
+
+label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#search {
+    border: none;
+    width: 20%;
+    height: 40px;
+    background-color: green;
+    border-radius: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+}
+
+table {
+    width: 100%;
+}
+
+#btnDelete {
+    margin-top: 1em;
+    border-radius: 5px;
+    width: 20%;
+    border: none;
+    background-color: red;
+    height: 40px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+th {
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td {
+    font-family: 'Dosis';
+    font-size: 18px;
+}
+
+#btnDelete:hover {
+    background-color: darkred;
+}
+
+#btn-close {
+    border: none;
+}
+
+.modal-title {
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body {
+    font-family: 'Dosis';
+    font-size: 18px;
+}
+
+#btnNo {
+    outline: none;
+    border-radius: 0px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    border: none;
+}
+
+#btnSi {
+    outline: none;
+    border-radius: 0px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    background-color: red;
+    border: none;
+}
+
+#btnNo:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#btnSi:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.deleteSuccess div {
+    margin-top: 1em;
+    border: green 1px solid;
+    border-radius: 5px;
+    height: 45px;
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFound div {
+    margin-top: .5em;
+    border: red 1px solid;
+    border-radius: 5px;
+    height: 45px;
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

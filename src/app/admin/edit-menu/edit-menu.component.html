@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="idContainer">
+            <label for="idSearch">Ingresar ID del menú a editar</label>
+            <br>
+            <input type="number" name="idSearch" id="idSearch" placeholder="Ingresar ID..." #idSearch> &nbsp;
+            <button (click)="selectMenu(idSearch.value)">Buscar</button>
+        </div>
+        <hr style="width: 96%;" class="mx-auto">
+        <div class="menuNotFound" *ngIf="_menuNotFound">
+            <div class="alert-danger">
+                Este menú no existe
+            </div>
+        </div>
+        <div *ngIf="selectedMenu != null">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+                <tr>
+                    <td>{{ selectedMenu.menu_id }}</td>
+                    <td>{{ selectedMenu.title }}</td>
+                    <td>{{ selectedMenu.price | currency }}</td>
+                    <td>{{ selectedMenu.category }}</td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+        <form *ngIf="selectedMenu != null" [formGroup]="form">
+            <label for="title" id="titleLabel">Título</label>
+            <br>
+            <input type="text" id="title" name="title" placeholder="Ingresar nuevo título" [(ngModel)]="title"
+            formControlName="title">
+            <small *ngIf="form.get('title').errors?.required">
+                Este campo es obligatorio
+            </small>
+            <br>
+            <label for="description" id="descLabel">Descripción</label>
+            <textarea name="description" id="description" placeholder="Ingrese una nueva descripción" 
+            [(ngModel)]="description" formControlName="description"></textarea>
+            <small *ngIf="form.get('description').errors?.required">
+                Este campo es obligatorio
+            </small>
+            <br>
+            <label for="price" id="priceLabel">Precio</label>
+            <input type="number" name="price" id="price" placeholder="Ingresar un nuevo precio" [(ngModel)]="price"
+            formControlName="price">
+            <small *ngIf="form.get('price').errors?.required">
+                Este campo es obligatorio
+            </small>
+            <small *ngIf="form.get('price').errors?.pattern">
+                Este campo no es válido
+            </small>
+            <br>
+            <label for="image" id="imageLabel">Imagen (URL)</label>
+            <input type="text" id="image" name="image" placeholder="Ingrese un URL nuevo" [(ngModel)]="image"
+            formControlName="image">
+            <small *ngIf="form.get('image').errors?.required">
+                Este campo es obligatorio
+            </small>
+            <br>
+            <div *ngIf="_deleted" class="menuDeleted">
+                <div class="alert-success">
+                    ¡Menú eliminado con éxito!
+                </div>
+            </div>
+            <div class="btnContainer">
+                <button class="add" (click)="form.valid ? onSubmit() : false">
+                    Realizar cambios
+                </button> &nbsp;
+                <button class="reset" (click)="toDefault()">Restablecer a valores iniciales</button>
+            </div>
+        </form>
+    </div>
+</div>

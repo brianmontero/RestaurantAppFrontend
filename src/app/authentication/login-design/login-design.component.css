@@ -1,0 +1,83 @@
+.wrapper {
+    width: 40%;
+    margin: 3rem 0 3rem 0;
+    padding: 1rem;
+}
+
+#username-label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#username-input {
+    font-family: 'Dosis';
+    font-size: 20px;
+    border-radius: 0;
+}
+
+#username-input:focus {
+    box-shadow: none;
+}
+
+#password-label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#password-input {
+    font-family: 'Dosis';
+    font-size: 20px;
+    border-radius: 0;
+}
+
+#password-input:focus {
+    box-shadow: none;
+}
+
+#button {
+    border: none;
+    background-color: cadetblue;
+    color: #FFF;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+#button:hover {
+    background-color: transparent;
+    color: black;
+    border: black 1px solid;
+}
+
+.no-account p {
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+.no-account p a {
+    text-decoration: none;
+    color: blue;
+}
+
+.no-account p a:hover {
+    text-decoration: underline;
+}
+
+small {
+    color: red;
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+#loginError {
+    border: 1px solid red;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    height: 40px;
+}

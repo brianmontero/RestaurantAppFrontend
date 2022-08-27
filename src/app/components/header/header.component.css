@@ -1,0 +1,137 @@
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.navbar {
+    background-color: #FAAF00;
+}
+
+li a {
+    font-family: 'Dosis';
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+li a:hover {
+    color: beige;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu {
+    background-color: #FAAF00;
+}
+
+.dropdown-item:hover, :focus {
+    background-color: #FAAF00;
+    cursor: pointer;
+}
+
+.ingresar {
+    text-decoration: none;
+    color: black;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.ingresar:hover {
+    color: beige;
+}
+
+.registrarme {
+    text-decoration: none;
+    color: black;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.registrarme:hover {
+    color: beige;
+}
+
+.cartIcon i {
+    position: relative;
+    top: 1px;
+}
+
+.cartIcon a {
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cartIcon:hover {
+    cursor: pointer;
+}
+
+.separator a {
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    top: -4px;
+}
+
+.separator a:hover {
+    cursor:default;
+}
+
+.separator {
+    margin: 0 1rem 0 1rem;
+}
+
+.client-options {
+    margin: 0 1.5rem 0 0;
+}
+
+#userIcon {
+    position: relative;
+    margin-right: 10px;
+    top: 8px;
+}
+
+#dropdownMenuLink {
+    text-decoration: none;
+    color: black;
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.client-container {
+    display: flex;
+    position: relative;
+    top: 4px;
+}
+
+.navbar-toggler {
+    border: black 1px solid;
+}
+
+#adminOptions, #adminLogout {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: black;
+}
+
+#adminOptions:hover, #adminLogout:hover {
+    color: #FFF;
+    cursor: pointer;
+}

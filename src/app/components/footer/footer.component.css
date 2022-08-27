@@ -1,0 +1,65 @@
+.container-fluid {
+    height: 100px;
+}
+
+.social {
+    display: flex;
+}
+
+.social div {
+    margin: 10px;
+}
+
+.facebook i {
+    color: black;
+    transition: 0.2s;
+}
+
+.facebook i:hover {
+    color: #FAAF00;
+    cursor: pointer;
+}
+
+.instagram i {
+    color: black;
+    transition: 0.2s;
+}
+
+.instagram i:hover {
+    color: #FAAF00;
+    cursor: pointer;
+}
+
+.twitter i {
+    color: black;
+    transition: 0.2s;
+}
+
+.twitter i:hover {
+    color: #FAAF00;
+    cursor: pointer;
+}
+
+.copyright p {
+    font-family: 'Dosis';
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    color: grey;
+}
+
+.idiota {
+    font-family: 'Dosis';
+    font-size: 18px;
+    text-align: center;
+}
+
+.idiota a {
+    color: #FAAF00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.idiota a:hover {
+    text-decoration: underline;
+}

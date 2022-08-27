@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <app-spinner *ngIf="showSpinner" class="mx-auto" style="margin-top: 2em;"></app-spinner>
+        <div class="col" 
+        *ngFor="let menu of menuList | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength }">
+            <app-menu-item [item]="menu" (click)="productSelected(menu)"></app-menu-item>
+        </div>
+    </div>
+
+    <pagination-controls (pageChange)="page = $event" class="pagination"></pagination-controls>
+
+</div>

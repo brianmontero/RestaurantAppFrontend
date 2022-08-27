@@ -1,0 +1,37 @@
+h1 {
+    margin-top: 20px;
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+table {
+    width: 80%;
+}
+
+th {
+    text-align: center;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+td {
+    text-align: center;
+    border: 1px solid #CCC;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}
+
+.notFound p {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}

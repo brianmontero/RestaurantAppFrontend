@@ -1,0 +1,22 @@
+<div class="container-fluid px-2">
+    <div class="wrapper">
+        <h3 class="text-center">Detalles de compra</h3>
+        <hr>
+        <div class="subtotal">
+            <p>Subtotal:</p>
+            <strong>{{ subtotal | currency }}</strong>
+        </div>
+        <div class="iva">
+            <p>IVA (22%): </p>
+            <strong>{{ iva | currency }}</strong>
+        </div>
+        <hr>
+        <div class="total">
+            <p>Total:</p>
+            <strong>{{ totalPrice | currency }}</strong>
+        </div>
+        <div class="buyBtn">
+            <button (click)="buy(total)">Comprar</button>
+        </div>
+    </div>
+</div>

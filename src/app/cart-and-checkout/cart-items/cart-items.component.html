@@ -1,0 +1,10 @@
+<div class="container-fluid px-0">
+    <div class="scroll" *ngIf="productList.length > 0">
+        <div *ngFor="let menu of productList">
+            <app-cart-item [menu]="menu"></app-cart-item>
+        </div>
+    </div>
+    <div *ngIf="productList.length == 0" class="notFound">
+        <p>El carro está vacio</p>
+    </div>
+</div>

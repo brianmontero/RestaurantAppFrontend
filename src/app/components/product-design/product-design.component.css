@@ -1,0 +1,220 @@
+#firstRow {
+    margin: 2rem;
+    background-color: #CCC;
+    border-radius: 5px;
+}
+
+.item-image {
+    margin: 2rem 0 2rem 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.wrapper {
+    width: 75%;
+    height: 75%;
+}
+
+.info {
+    margin: 2rem 0 2rem 0;
+    display: block;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title p {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.price p {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 22px;
+    color: green;
+}
+
+.rating i {
+    color: orangered;
+}
+
+.description {
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+}
+
+.description p {
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+.ingredients p {
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+.ing-list {
+    word-wrap: break-word;
+}
+
+.buyButton {
+    margin-top: 3rem;
+}
+
+.buyButton button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: green;
+    border-radius: 5px;
+    color: beige;
+    font-family: 'Dosis';
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.buyButton button:hover {
+    background-color: transparent;
+    border: 1px black solid;
+    color: black;
+}
+
+/* Second Row */
+
+#secondRow {
+    background-color: #CCC;
+    width: 94%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    padding-bottom: .5rem;
+}
+
+.comment-title {
+    margin-top: .5rem;
+}
+
+.comment-title p {
+    font-family: 'Dosis';
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+.no-comments p {
+    font-size: 20px;
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+#heartIcon {
+    position: relative;
+    top: -8px;
+    color: red;
+    transition: transform 0.2s;
+}
+
+#heartIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.commentBtn {
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: green;
+    height: 40px;
+    width: 200px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    transition: 0.2s;
+    margin-left: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.commentBtn:hover {
+    background-color: #00680A;
+}
+
+.makeComment {
+    width: 94%;
+    border-radius: 5px;
+    background-color: #CCC;
+}
+
+.makeComment textarea {
+    margin-bottom: 10px;
+    width: 96%;
+    height: 150px;
+    padding-left: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+}
+
+#starsSection {
+    padding-left: 22px;
+    padding-top: 10px;
+}
+
+#starsSection p {
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#starsSection input {
+    width: 50px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    position: relative;
+    top: -6px;
+}
+
+.realizeComment {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.realizeComment button {
+    margin-right: 22px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+}
+
+#starsSection small {
+    font-family: 'Dosis';
+    font-weight: bold;
+    color: red;
+    position: relative;
+    top: -7px;
+}
+
+.makeComment h4 {
+    font-family: 'Dosis';
+    font-weight: bold;
+    padding-top: 20px;
+}

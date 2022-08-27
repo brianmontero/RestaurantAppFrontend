@@ -1,0 +1,24 @@
+<div class="container px-0">
+    <div class="row">
+        <h1 class="text-center">Historial de compra</h1>
+        <h3>Total gastado: {{ total | currency }}</h3>
+    </div>
+    <hr>
+    <div class="tableContainer" *ngIf="salesList.length > 0">
+        <table class="mx-auto">
+            <tr>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Cantidad de menús</th>
+            </tr>
+            <tr *ngFor="let sale of salesList">
+                <td>{{ sale.date }}</td>
+                <td>{{ sale.total | currency }}</td>
+                <td>{{ sale.amount }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="notFound" *ngIf="salesList.length == 0">
+        <p>No tienes compras</p>
+    </div>
+</div>

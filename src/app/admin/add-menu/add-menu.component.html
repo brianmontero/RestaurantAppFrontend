@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row">
+        <form [formGroup]="form" #localForm="ngForm" 
+        (submit)="form.valid ? onSubmit(form.getRawValue()) : submitError()">
+            <div class="formContainer">
+                <label for="title">Título</label>
+                <input type="text" name="title" id="title" placeholder="Título" formControlName="title">
+                <small *ngIf="localForm.submitted && form.get('title').errors?.required">
+                    Este campo es obligatorio
+                </small>
+                <div class="ingContainer">
+                    <label>Ingredientes</label> &nbsp;
+                    <small style="color: grey;">(Dos ingredientes mínimo)</small>
+                    <br>
+                    <input type="text" name="ing1" id="ing1" placeholder="Ingrediente" 
+                    formControlName="ing1">
+                    <small *ngIf="localForm.submitted && form.get('ing1').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                    <input type="text" name="ing2" id="ing2" placeholder="Ingrediente" formControlName="ing2">
+                    <small *ngIf="localForm.submitted && form.get('ing2').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                    <input type="text" name="ing3" id="ing3" placeholder="Ingrediente" formControlName="ing3">
+                    <input type="text" name="ing4" id="ing4" placeholder="Ingrediente" formControlName="ing4">
+                </div>
+                <label for="description">Descripción</label>
+                <textarea name="description" id="description" placeholder="Descripción" maxlength="255" formControlName="description"></textarea>
+                <div class="descWarn">
+                    <small *ngIf="localForm.submitted && form.get('description').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                </div>
+                <label for="price">Precio</label>
+                <input type="number" name="price" id="price" placeholder="Precio" formControlName="price">
+                <small *ngIf="localForm.submitted && form.get('price').errors?.required">
+                    Este campo es obligatorio
+                </small>
+                <small *ngIf="localForm.submitted && form.get('price').errors?.pattern">
+                    El precio no es válido
+                </small>
+                <select name="category" id="category" formControlName="category">
+                    <option value="" disabled>Categoría</option>
+                    <option value="none">Ninguna</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="salad">Ensalada</option>
+                    <option value="vegan">Vegana</option>
+                    <option value="breakfast">Desayuno</option>
+                </select>
+                <div class="categoryWarn">
+                    <small *ngIf="localForm.submitted && form.get('category').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                </div>
+                <label for="image">Imagen (URL)</label>
+                <input type="text" id="image" name="image" placeholder="Inserte URL de la imagen" formControlName="image">
+                <div>
+                    <small *ngIf="localForm.submitted && form.get('category').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                </div>
+                <div *ngIf="_errorOnSubmit" class="subError">
+                    <div class="alert-danger">
+                        <p>El menú no se ha agregado porque el formulario tiene errores</p>
+                    </div>
+                </div>
+                <div *ngIf="_successOnSubmit" class="subSuccess">
+                    <div class="alert-success">
+                        El menú ha sido agregado con éxito!
+                    </div>
+                </div>
+                <button type="submit">Añadir menú</button>
+            </div>
+        </form>
+    </div>
+</div>

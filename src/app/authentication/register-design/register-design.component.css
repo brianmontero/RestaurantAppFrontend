@@ -1,0 +1,110 @@
+.container {
+    height: 100%;
+}
+
+.wrapped {
+    padding: 3rem 0 3rem 0;
+    width: 40%;
+}
+
+#eyeIcon {
+    float: right;
+    margin-right: 10px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    color: grey;
+}
+
+#eyeIcon:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#eyeSlashIcon {
+    float: right;
+    margin-right: 10px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    color: grey;
+}
+
+#eyeSlashIcon:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#username-label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#username-input {
+    border-radius: 0;
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+#username-input:focus {
+    box-shadow: none;
+}
+
+#email-label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#email-input {
+    border-radius: 0;
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+#email-input:focus {
+    box-shadow: none;
+}
+
+#password-label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#password-input {
+    border-radius: 0;
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+#password-input:focus {
+    box-shadow: none;
+}
+
+button {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    color: #FFF;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: transparent;
+    color: black;
+    border: black 1px solid;
+}
+
+small {
+    font-family: 'Dosis';
+    font-weight: bold;
+    color: red;
+}

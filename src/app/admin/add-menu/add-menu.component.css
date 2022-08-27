@@ -1,0 +1,205 @@
+.formContainer {
+    width: 100%;
+    height: auto;
+}
+
+#title {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#title:focus {
+    border: 1px solid grey;
+}
+
+label {
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ingContainer {
+    margin: 20px 0 20px 0;
+}
+
+.ingContainer input {
+    margin: 10px 0px;
+    width: 75%;
+    display: block;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+}
+
+.ingContainer input:focus {
+    border: 1px solid grey;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+}
+
+.descWarn {
+    margin: 0 0 20px 0;
+}
+
+textarea:focus {
+    border: 1px solid grey;
+}
+
+#price {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+}
+
+#price:focus {
+    border: 1px grey solid;
+}
+
+#price::-webkit-outer-spin-button,
+#price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.categoryWarn {
+    margin-bottom: 20px;
+}
+
+#image {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s;
+}
+
+button {
+    margin-top: 20px;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #098D00;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+option {
+    font-weight: bold;
+}
+
+/* Card design */
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+}
+
+.card-title {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-price {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    color: green;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid red;
+}
+
+small {
+    color: red;
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+.subError {
+    margin-top: 20px;
+}
+
+.subError .alert-danger {
+    border-radius: 5px;
+    height: 60px;
+    width: 100%;
+    border: red 1px solid;
+}
+
+.subSuccess div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+}

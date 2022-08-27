@@ -1,0 +1,246 @@
+.idContainer label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.idContainer input {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 50%;
+    height: 40px;
+    outline: none;
+}
+
+#idSearch::-webkit-outer-spin-button,
+#idSearch::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+    border: 1px solid grey;
+}
+
+.idContainer button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: #FFF;
+    font-family: 'Dosis';
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.idContainer button:hover {
+    background-color: darkcyan;
+}
+
+hr {
+    margin: 15px 0 10px 0;
+}
+
+#title {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#title:focus {
+    border: 1px solid grey;
+}
+
+#titleLabel {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ingContainer {
+    margin: 20px 0 20px 0;
+}
+
+.ingContainer label {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ingContainer a {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 16px;
+    color: grey;
+}
+
+.ingContainer input {
+    width: 50%;
+    height: 35px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.ingContainer input:focus {
+    border: 1px solid grey;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    text-indent: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.2s;
+}
+
+textarea:focus {
+    border: 1px solid grey;
+}
+
+#descLabel {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#priceLabel {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#price {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#price:focus {
+    border: 1px solid grey;
+}
+
+#price::-webkit-outer-spin-button,
+#price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#imageLabel {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#image {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.btnContainer {
+    margin-top: 20px;
+}
+
+.add {
+    border: none;
+    width: 30%;
+    height: 40px;
+    background-color: green;
+    border-radius: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+}
+
+.reset {
+    border: none;
+    width: 40%;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    color: #FFF;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    font-family: 'Dosis';
+    font-size: 20px;
+}
+
+table td {
+    font-family: 'Dosis';
+    font-size: 18px;
+}
+
+small {
+    font-family: 'Dosis';
+    font-weight: bold;
+    color: red;
+}
+
+.menuNotFound div {
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.menuDeleted div {
+    margin-top: 10px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid green;
+    border-radius: 5px;
+}

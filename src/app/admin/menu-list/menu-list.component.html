@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row" id="firstRow">
+        <div class="searchContainer d-flex">
+            <button class="iconButton">
+                <i class="fas fa-search"></i>
+            </button>
+            <input type="text" placeholder="Buscar un producto..." [(ngModel)]="search" 
+            (ngModelChange)="emittingSearch($event)">
+        </div>
+    </div>
+    <div class="row" id="categoryRow">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" 
+        (change)="selectedCategory($event)">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Todos</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Pastas</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">Ensaladas</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio4">Veganos</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio5">Desayunos</label>
+        </div>
+    </div>
+    <div class="row" id="secondRow">
+        <app-spinner *ngIf="showSpinner"></app-spinner>
+        <div class="itemContainer">
+            <a class="list-group-item list-group-item-action disabled" id="disabledRow">
+                <div class="row" id="listMenus">
+                    <div class="col-md-3" id="menuIdDisabled">ID</div>
+                    <div class="col-md-3">Título</div>
+                    <div class="col-md-3" id="menuPriceDisabled">Precio</div>
+                    <div class="col-md-3">Categoría</div>
+                </div>
+            </a>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" *ngFor="let menu of menuList">
+                    <div class="row" id="listMenus" (click)="selectedProduct(menu)">
+                        <div class="col-md-3" id="menuId">{{ menu.menu_id }}</div>
+                        <div class="col-md-3" id="menuTitle">{{ menu.title }}</div>
+                        <div class="col-md-3" id="menuPrice">{{ menu.price | currency }}</div>
+                        <div class="col-md-3">{{ menu.category }}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

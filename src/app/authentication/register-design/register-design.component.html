@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="wrapped mx-auto">
+        <form [formGroup]="form" #localForm="ngForm" 
+        (submit)="form.valid ? registerUser(form.value) : false">
+            <div class="mb-3">
+                <label class="form-label" id="username-label">Ingrese un nombre de usuario</label>
+                <input type="text" class="form-control" placeholder="Nombre de usuario" id="username-input"
+                formControlName="username">
+                <small *ngIf="localForm.submitted && form.get('username').errors?.required">
+                    Este campo es obligatorio
+                </small>
+                <small *ngIf="localForm.submitted && !form.get('username').errors?.pattern">
+                    Este nombre de usuario no está permitido
+                </small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" id="email-label">Ingrese su email</label>
+                <input type="email" class="form-control" placeholder="Email" id="email-input" formControlName="email">
+                <small style="font-family: 'Dosis'; font-size: 16px;">No se va a requerir confirmación</small>
+                <div class="d-flex justify-content-between">
+                    <small *ngIf="localForm.submitted && form.get('email').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                    <small *ngIf="localForm.submitted && form.get('email').errors?.email">
+                        El formato no es válido
+                    </small>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="mb-3" class="form-label" id="password-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Contraseña" id="password-input"
+                [type]="hide ? 'password' : 'text'" formControlName="password">
+                <div *ngIf="hide">
+                    <i class="fas fa-eye" id="eyeIcon" (click)="hidePassword()"></i>
+                </div>
+                <div *ngIf="!hide">
+                    <i class="fas fa-eye-slash" id="eyeSlashIcon" (click)="hidePassword()"></i>
+                </div>
+                <small *ngIf="localForm.submitted && form.get('password').errors?.required">
+                    Este campo es obligatorio
+                </small>
+            </div>
+            <div class="mb-3">
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</div>

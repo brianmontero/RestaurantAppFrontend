@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+        <label for="idSearch">Ingrese el ID del menú a eliminar</label>
+        <br>
+        <input type="number" name="idSearch" id="idSearch" placeholder="Ingrese ID..." #id> &nbsp;
+        <button type="submit" (click)="searchMenu(id.value)" id="search">Buscar</button>
+    </div>
+    <hr>
+    <div class="row">
+        <div *ngIf="_menuNotFound" class="notFound">
+            <div class="alert-danger">
+                El menú no existe
+            </div>
+        </div>
+        <div *ngIf="selectedMenu.length != 0">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+                <tr>
+                    <td>{{ selectedMenu[0].menu_id }}</td>
+                    <td>{{ selectedMenu[0].title }}</td>
+                    <td>{{ selectedMenu[0].price | currency }}</td>
+                    <td>{{ selectedMenu[0].category }}</td>
+                </tr>
+            </table>
+            <button id="btnDelete" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Eliminar menú</button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Eliminar menú</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ¿Seguro que desea eliminar el menú <strong>{{ selectedMenu[0].title }}</strong>?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnNo">No</button>
+                      <button type="button" class="btn btn-primary" id="btnSi" data-bs-dismiss="modal"
+                      (click)="deleteMenu(selectedMenu[0].menu_id)">
+                          Sí, estoy seguro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="deleteSuccess" *ngIf="_menuDeleted">
+            <div class="alert-success">
+                El menú fue eliminado con éxito
+            </div>
+        </div>
+    </div>
+</div>

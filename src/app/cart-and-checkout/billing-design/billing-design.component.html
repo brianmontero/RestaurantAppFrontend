@@ -1,0 +1,105 @@
+<div class="container">
+    <h1 class="text-center">Facturación</h1>
+    <form [formGroup]="form" #localForm="ngForm" (submit)="form.valid ? onSubmit() : false">
+        <div class="wrapper mx-auto">
+            <div class="name">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese su nombre" formControlName="name">
+                <small *ngIf="localForm.submitted && form.get('name').errors?.required">
+                    Este campo es obligatorio
+                </small>
+            </div>
+            <div class="surname">
+                <label for="surname">Apellido</label>
+                <input type="text" name="surname" id="surname" placeholder="Ingrese su apellido" formControlName="surname">
+                <small *ngIf="localForm.submitted && form.get('surname').errors?.required">
+                    Este campo es obligatorio
+                </small>
+            </div>
+            <div class="address">
+                <label for="address">Dirección</label>
+                <input type="text" name="address" id="address" placeholder="Ingrese su dirección" formControlName="address">
+                <small *ngIf="localForm.submitted && form.get('address').errors?.required">
+                    Este campo es obligatorio
+                </small>
+            </div>
+            <div class="phone">
+                <label for="phone">Teléfono</label>
+                <input type="number" name="phone" id="phone" placeholder="Ingrese su número de teléfono" formControlName="phone">
+                <small *ngIf="localForm.submitted && form.get('phone').errors?.required">
+                    Este campo es obligatorio
+                </small>
+                <small *ngIf="localForm.submitted && form.get('phone').errors?.pattern">
+                    El formato es inválido
+                </small>
+            </div>
+        </div>
+        <div class="cardWrapper mx-auto">
+            <h3>Total: {{ totalAmount | currency }}</h3>
+            <div class="cardInfo">
+                <hr>
+                <div class="cards d-flex justify-content-between">
+                    <div>
+                        <a href="https://www.paypal.com/signin" target="_blank">
+                            <i class="fab fa-cc-paypal fa-2x" title="Paypal" id="paypal"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <i class="fab fa-cc-visa fa-2x" title="VISA"></i> &nbsp;
+                        <i class="fab fa-cc-mastercard fa-2x" title="Mastercard"></i> &nbsp;
+                        <i class="fab fa-cc-apple-pay fa-2x" title="Apple Pay"></i> &nbsp;
+                        <i class="fab fa-cc-amex fa-2x" title="American Express"></i>
+                    </div>
+                </div>
+                <label for="cardNumber" formControlName="cardNumber">Número de tarjeta</label>
+                <input type="number" placeholder="Ingrese el número de su tarjeta" class="cardNumber" formControlName="cardNumber"
+                oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="16" placeholder="0000 0000 0000 0000">
+                <div class="cardNumberErrors">
+                    <small *ngIf="localForm.submitted && form.get('cardNumber').errors?.required">
+                        Este campo es obligatorio
+                    </small>
+                    <small *ngIf="localForm.submitted && form.get('cardNumber').errors?.pattern">
+                        El número de la tarjeta no es válido
+                    </small>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <input type="number" placeholder="MM" class="cardMonth" formControlName="cardMonth"
+                        oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2">
+                        /
+                        <input type="number" placeholder="YY" class="cardYear" formControlName="cardYear"
+                        oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="2">
+                        <div>
+                            <small *ngIf="localForm.submitted && form.get('cardMonth').errors?.required">
+                                Este campo es obligatorio
+                            </small>
+                            <small *ngIf="localForm.submitted && form.get('cardMonth').errors?.pattern">
+                                El campo de meses no es válido
+                            </small>
+                            <small *ngIf="localForm.submitted && form.get('cardYear').errors?.required">
+                                Este campo es obligatorio
+                            </small>
+                            <small *ngIf="localForm.submitted && form.get('cardYear').errors?.pattern">
+                                El campo de años no es válido
+                            </small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="cardCode">Código:</label> &nbsp;
+                        <input type="number" class="cardCode" placeholder="XXX" formControlName="cardCode"
+                        oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="3">
+                        <div>
+                            <small *ngIf="localForm.submitted && form.get('cardCode').errors?.required">
+                                Este campo es obligatorio
+                            </small>
+                            <small *ngIf="localForm.submitted && form.get('cardCode').errors?.pattern">
+                                El código es inválido
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="mx-auto">Continuar</button>
+    </form>
+</div>

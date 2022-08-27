@@ -1,0 +1,60 @@
+.card {
+    width: 100%;
+    border: none;
+}
+
+#deleteIcon {
+    position: relative;
+    top: -4px;
+    color: red;
+}
+
+#deleteIcon:hover {
+    cursor: pointer;
+}
+
+.card-title {
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+.card-unit { 
+    font-family: 'Dosis';
+    font-size: 16px;
+    color: green;
+}
+
+.card-total {
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.card-quant {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-quant p {
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+.card-quant input {
+    position: relative;
+    top: -7px;
+    width: 50px;
+    outline: none;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-family: 'Dosis';
+    font-weight: bold;
+    text-indent: 5px;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+}

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center">Lista de clientes</h1>
+    </div>
+    <div class="row">
+        <h3 class="text-center">Buscar usuario</h3>
+        <input type="text" placeholder="Ingrese el nombre de usuario" id="search" class="mx-auto" 
+        (input)="onSearch($event)">
+    </div>
+    <div class="row">
+        <div class="wrapper mx-auto">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de usuario</th>
+                    <th>E-Mail</th>
+                    <th>Rol</th>
+                </tr>
+                <app-spinner class="mx-auto" *ngIf="showSpinner"></app-spinner>
+                <tr *ngFor="let client of clientList">
+                    <td>{{ client.client_id }}</td>
+                    <td>{{ client.username }}</td>
+                    <td>{{ client.email }}</td>
+                    <td>{{ client.role }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

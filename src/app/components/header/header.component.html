@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img src="./assets/logo.png" alt="..." width="300" height="32">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/menu">Menú</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+            Categorías
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" [routerLink]="['/menu/pasta']">Pastas</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menu/salad']">Ensaladas</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menu/vegan']">Menú Vegano</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/menu/breakfast']">Desayunos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div *ngIf="userData.logged && userData.username == 'admin'">
+        <a routerLink="/admin" id="adminOptions">Administración</a> &nbsp;
+        <a (click)="logOut()" id="adminLogout">Cerrar sesión</a>
+      </div>
+      <div class="auth" *ngIf="!userData.logged">
+          <a routerLink="/login" class="ingresar">Ingresar</a> &nbsp;
+          <a routerLink="/register" class="registrarme">Registrarme</a> &nbsp;
+      </div>
+      <div class="client-container">
+        <div class="client-options d-flex" 
+        *ngIf="userData.logged && userData.username != 'admin'">
+          <i class="fas fa-user" id="userIcon"></i>
+          <div class="dropdown">
+            <a class="dropdown-toggle" id="dropdownMenuLink" aria-expanded="false">
+              {{ userData.username }}
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="userOptionsMenu">
+              <li><a class="dropdown-item" [routerLink]="['/client/profile']">Mi perfil</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/client/history']">Historial</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/client/favorites']">Favoritos</a></li>
+              <li><a class="dropdown-item" (click)="logOut()">Cerrar sesión</a></li>
+            </ul>
+          </div>
+          <div class="d-flex">
+            <div class="separator">
+              <a>l</a>
+            </div>
+            <div class="cartIcon" [routerLink]="['/cart']">
+              <i class="fas fa-shopping-cart"></i>
+              <a>( {{ cartLength }} )</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

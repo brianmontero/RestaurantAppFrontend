@@ -1,0 +1,60 @@
+.wrapper {
+    width: 50%;
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 2em;
+    border: 1px solid #CCC;
+}
+
+h1 {
+    margin: 20px 0px 20px 0px;
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Dosis';
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-family: 'Dosis';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td {
+    font-family: 'Dosis';
+    font-size: 20px;
+    height: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffa00f;
+}
+
+#search {
+    width: 50%;
+    height: 40px;
+    font-family: 'Dosis';
+    font-size: 18px;
+    margin-bottom: 2em;
+    outline: none;
+    border: 1px solid #CCC;
+}

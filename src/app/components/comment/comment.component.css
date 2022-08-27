@@ -1,0 +1,46 @@
+.card {
+    margin: 10px 0 20px 0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment {
+    margin-top: 5px;
+}
+
+.comment p {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+}
+
+.username p {
+    font-family: 'Dosis';
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 8px;
+}
+
+.options i {
+    color: black;
+    transition: 0.2s;
+}
+
+.options i:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.stars i {
+    color: gold;
+}

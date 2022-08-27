@@ -1,0 +1,25 @@
+#mainRow {
+    height: 100%;
+    padding: 1em;
+}
+
+.col-4 {
+    width: 250px;
+    padding: 2em;
+}
+
+.col-8 {
+    padding: 2em 2em 2em 1em;
+}
+
+.list-group-item {
+    font-family: 'Dosis';
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.list-group-item.active {
+    background-color: #FAAF00;
+    border-color: #FAAF00;
+}

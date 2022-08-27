@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row" id="firstRow">
+        <app-spinner *ngIf="showSpinner"></app-spinner>
+        <div class="col-md-8" id="firstCol">
+            <div class="wrapper mx-auto">
+                <img [src]="productList[0].image" alt="..." class="item-image">
+            </div>
+        </div>
+        <div class="col-md-4" id="secondCol">
+            <div class="info">
+                <div class="title">
+                    <p>{{ productList[0].title }}</p>
+                    <i class="fas fa-heart fa-2x" id="heartIcon" 
+                    (click)="addFavorite(currentUser.client_id, productList[0].menu_id)"
+                    title="Añadir a favoritos"></i>
+                </div>
+                <div class="price">
+                    <p>{{ productList[0].price | currency }}</p>
+                </div>
+                <div class="rating d-flex" *ngIf="ratingAverage">
+                    <div *ngFor="let e of [].constructor(ratingAverage)">
+                        <i class="fas fa-star" title="Estrellas"></i>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>{{ productList[0].menu_description }}</p>
+                </div>
+                <div class="ingredients">
+                    <p><strong>Ingredientes:</strong></p>
+                    <div class="ing-list">
+                        <p>{{ productList[0].ingredients }}</p>
+                    </div>
+                </div>
+                <div class="buyButton">
+                    <button (click)="addProduct(productList[0])">Añadir al carro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-auto" id="secondRow">
+        <div class="comment-title">
+            <p>Comentarios ( {{ ratingLength }} )</p>
+        </div>
+        <hr class="mx-auto" style="width: 98%;">
+        <div *ngIf="ratingLength == 0">
+            <div class="no-comments mx-auto">
+                <p class="text-center">No hay comentarios</p>
+            </div>
+        </div>
+        <div *ngFor="let rating of ratingList">
+            <app-comment [item]="rating"></app-comment>
+        </div>
+    </div>
+    <div class="makeComment mx-auto" *ngIf="isLogged.status">
+        <h4 class="text-center">¡Escribe un comentario sobre este producto!</h4>
+        <form [formGroup]="form" #localForm="ngForm" (submit)="form.valid ? submitComment(form.value) : false">
+            <div class="d-flex align-items-center" id="starsSection">
+                <p>Estrellas:</p> &nbsp;
+                <input type="number" minlength="1" maxlength="5" formControlName="stars"> &nbsp;
+                <small *ngIf="localForm.submitted && form.get('stars').errors?.required">
+                    Es obligatorio dar estrellas.
+                </small>
+                <small *ngIf="localForm.submitted && form.get('stars').errors?.pattern">
+                    La calificación con estrellas es del 1 al 5.
+                </small>
+            </div>
+            <div class="d-flex justify-content-center">
+                <textarea placeholder="Escribe tu comentario..." formControlName="comment"></textarea>
+            </div>
+            <div class="realizeComment">
+                <button type="submit">Comentar</button>
+            </div>
+        </form>
+    </div>
+</div>
